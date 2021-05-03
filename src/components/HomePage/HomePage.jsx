@@ -16,29 +16,30 @@ const HomePage = () => {
               business communications platform.
             </p>
             <div className="action-btn">
-              <button className="btn green ">
+              <button className="btn green">
                 <FontAwesomeIcon className="icon-block" icon={faVideo} />
                 New Meeting
               </button>
-            </div>
-            <div className="input-block">
-              <div className="input-section">
-                <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
-                <input type="text" placeholder="entre a code or link" />
+              <div className="input-block">
+                <div className="input-section">
+                  <FontAwesomeIcon className="icon-block" icon={faKeyboard} />
+                  <input placeholder="Enter a code or link" />
+                </div>
+                <button className="btn no-bg">Join</button>
               </div>
-              <button className="btn no-bg">Join</button>
-            </div>
-            <div className="help-text">
-              <a href="">learn more about</a> About RingCentral
             </div>
           </div>
+          <div className="help-text">
+            <a href="#">Learn more</a> about Google Meet
+          </div>
         </div>
-        {/* rightside */}
         <div className="right-side">
-          <img
-            src="https://www.ringcentral.com/content/dam/rc-www/en_us/images/content/home-page/gradient-design/hero-girl-png-rendition.webp"
-            alt=""
-          />
+          <div className="content">
+            <img
+              alt="homepage"
+              src="https://www.ringcentral.com/content/dam/rc-www/en_us/images/content/home-page/gradient-design/hero-girl-png-rendition.webp"
+            />
+          </div>
         </div>
       </div>
     </div>
