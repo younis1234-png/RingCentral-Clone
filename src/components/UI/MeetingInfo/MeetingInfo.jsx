@@ -7,14 +7,16 @@ import {
   faShieldAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-const MeetingInfo = ({ setMeetInfoPopup, url }) => {
+const MeetingInfo = (props) => {
+  const { url, setMeetInfoPopup } = props;
+
   return (
     <div className="meeting-info-block">
       <div className="meeting-header">
         <h3>Your Meeting's ready</h3>
         <FontAwesomeIcon
-          icon={faTimes}
           className="icon"
+          icon={faTimes}
           onClick={() => {
             setMeetInfoPopup(false);
           }}
@@ -33,6 +35,7 @@ const MeetingInfo = ({ setMeetInfoPopup, url }) => {
           icon={faCopy}
           className="icon"
           onClick={() => navigator.clipboard.writeText(url)}
+          onClick={() => setMeetInfoPopup(false)}
         />
       </div>
       <div className="permission-text">
