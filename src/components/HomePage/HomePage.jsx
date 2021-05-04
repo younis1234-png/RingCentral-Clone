@@ -1,9 +1,20 @@
 import "./HomePage.scss";
+import { useHistory } from "react-router-dom";
 import Header from "../UI/Header/Header";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideo, faKeyboard } from "@fortawesome/free-solid-svg-icons";
+import shortid from "shortid";
 
 const HomePage = () => {
+  const history = useHistory();
+
+  const startCall = () => {
+    //gen new id
+    // redirect to callpage (#init is the init the person/ second person just has the link)
+    const uId = shortid.generate();
+    history.push(`/${uId}/#init`);
+  };
+
   return (
     <div className="home-page">
       <Header />
@@ -16,7 +27,7 @@ const HomePage = () => {
               business communications platform.
             </p>
             <div className="action-btn">
-              <button className="btn green">
+              <button className="btn green" onClick={startCall}>
                 <FontAwesomeIcon className="icon-block" icon={faVideo} />
                 New Meeting
               </button>

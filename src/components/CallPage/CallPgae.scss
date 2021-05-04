@@ -1,5 +1,8 @@
 .callpage-container {
+  overflow-y: hidden;
+  overflow-x: hidden;
   .video-container {
+    overflow: hidden;
     height: 100vh;
     width: 100%;
     object-fit: cover; // use "cover" to avoid distortion
